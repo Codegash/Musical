@@ -1,0 +1,17 @@
+/* Footer  */
+.footer {
+    margin: 0;
+    background-color: #1B2430;
+    color: #d6d0b8;
+    text-align: center;
+}
+
+.footer-text {
+    font-family: "DM Serif Display";
+    padding-top: 2%;
+}
+
+.copyright {
+    font-family: "Montserrat";
+    margin-bottom: 0;
+}

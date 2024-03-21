@@ -1,0 +1,86 @@
+{% extends 'layout.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='aboutStyle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+
+</head>
+
+<body>
+
+    {% block navigation %}
+    {% include 'includes/navbar.html' %}
+    {% endblock navigation %}
+
+    <div class="content">
+        <h1 class="heading">ABOUT THIS WEBSITE</h1>
+        <p class="intro">
+            “For us, music has above all a transcendental significance. It disengages the spiritual from the happenings
+            of life; it sings of the relationships of the human soul with the soul of things beyond. The world by day is
+            like European music; a flowing concourse of vast harmony, composed of concord and discord and many disconnected
+            fragments. And the night world is our Indian music; one pure, deep and tender raga. They both stir us, yet
+            the two are contradictory in spirit. But that cannot be helped. At the very root nature is divided into two, day
+            and night, unity and variety, finite and infinite. We men of India live in the realm of night; we are
+            overpowered by the sense of One and Infinite. Our music draws the listener away beyond the limits of everyday human joys
+            and sorrows, and takes us to that lonely region of renunciation which lies at the root of the universe, while
+            European music leads us a variegated dance through the endless rise and fall of human grief and joy.”</p>
+    </div>
+    
+    <h1 class="heading2 content">Request a Song</h1>
+
+    <form id="contactForm" class=" request-Form" data-sb-form-api-token="API_TOKEN" action="/about" method="post">
+        <div class="form-floating">
+            <input class="form-control" id="name" type="text" placeholder="Enter your name..." name='name'
+                data-sb-validations="required" />
+            <label for="name">Name</label>
+            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+        </div>
+        <div class="form-floating">
+            <input class="form-control" id="email" type="email" placeholder="Enter your email..." name='email'
+                data-sb-validations="required,email" />
+            <label for="email">Email address</label>
+            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+        </div>
+        <div class="form-floating">
+            <input class="form-control" id="phone" type="tel" placeholder="Enter your phone number..." name="phone"
+                data-sb-validations="required" />
+            <label for="phone">Phone Number</label>
+            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+            </div>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" id="message" placeholder="Enter your message here..." name='message'
+                style="height: 12rem" data-sb-validations="required"></textarea>
+            <label for="message">Message</label>
+            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
+            </div>
+        </div>
+        <br />
+        <!-- Submit success message-->
+        <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                To activate this form, sign up at
+                <br />
+            </div>
+        </div>
+        <!-- Submit error message-->
+        <div class="d-none" id="submitErrorMessage">
+            <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>
+        <!-- Submit Button-->
+        <button class="btn text-uppercase" id="submitButton" 
+            type="submit">SEND REQUEST</button>
+        
+    </form>
+    <!-- Footer -->
+    <div class="footer" id="foot">
+        {% block footer %}
+        {% include 'includes/footer.html' %}
+        {% endblock footer %}
+    </div>
+
+</body>
+
+</html>
+{% endblock %}

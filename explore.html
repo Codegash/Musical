@@ -1,0 +1,98 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='exploreStyle.css') }}">
+</head>
+
+<body>
+
+    {% block navigation %}
+    {% include 'includes/navbar.html' %}
+    {% endblock navigation %}
+
+    <div class="container container-explore">
+        <div class="songList">
+            <h1>Best of Western Classical Pieces</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="{{ url_for('static' , filename='Songs/covers/Beethoven.png')}}"
+                        alt="Ludwig van Beethoven">
+                    <span class="songName">Moonlight Sonata No.14 in - 1st movement</span>
+                    <span class="songlistplay"><span class="timestamp">5:28<i id="0"
+                                class="far songItemPlay fa-play-circle"></span></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="{{ url_for('static' , filename='Songs/covers/Beethoven.png')}}"
+                        alt="Ludwig van Beethoven">
+                    <span class="songName">Beethoven - Für Elise</span>
+                    <span class="songlistplay"><span class="timestamp">2:36<i id="1"
+                                class="far songItemPlay fa-play-circle"></span></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="{{ url_for('static' , filename='Songs/covers/LisztLiebestraum.jpg')}}"
+                        alt="Liszt's Liebestraum">
+                    <span class="songName">Liszt's Liebestraum No.3</span>
+                    <span class="songlistplay"><span class="timestamp">4:24<i id="2"
+                                class="far songItemPlay fa-play-circle"></span></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="{{ url_for('static' , filename='Songs/covers/Edvard Greig.jpg')}}" alt="Edvard Grieg">
+                    <span class="songName">Grieg's Arietta (Lyric Piece Op.12 No.1)</span>
+                    <span class="songlistplay"><span class="timestamp">1:06<i id="3"
+                                class="far songItemPlay fa-play-circle"></span></i></span>
+                </div>
+
+                <div class="songItem">
+                    <img src="{{ url_for('static' , filename='Songs/covers/Gabriel Faure.jpg')}}" alt="Gabriel Faure">
+                    <span class="songName">Fauré's Berceuse (Lullaby) from the Dolly Suite </span>
+                    <span class="songlistplay"><span class="timestamp">2:38<i id="4"
+                                class="far songItemPlay fa-play-circle"></span></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="{{ url_for('static' , filename='Songs/covers/Mozart.jpg')}}" alt="Mozart">
+                    <span class="songName">Wolfgang Amadeus Mozart - Symphony No. 40 </span>
+                    <span class="songlistplay"><span class="timestamp">5:58<i id="5"
+                                class="far songItemPlay fa-play-circle"></span></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="{{ url_for('static' , filename='Songs/covers/Juventino Rosas.jpg')}}"
+                        alt="Juventino Rosas">
+                    <span class="songName">Juventino Rosas - Over the Waves</span>
+                    <span class="songlistplay"><span class="timestamp">6:17<i id="6"
+                                class="far songItemPlay fa-play-circle"></span></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="{{ url_for('static' , filename='Songs/covers/Beethoven.png')}}"
+                        alt="Ludwig van Beethoven">
+                    <span class="songName">Beethoven-Minuet-in-G</span>
+                    <span class="songlistplay"><span class="timestamp">2:24<i id="7"
+                                class="far songItemPlay fa-play-circle"></span></i></span>
+                </div>
+                <div class="songItem">
+                    <img src="{{ url_for('static' , filename='Songs/covers/Edvard Greig.jpg')}}" alt="Edvard Grieg">
+                    <span class="songName">Grieg's Holberg Suite (3rd movement: Gavotte)</span>
+                    <span class="songlistplay"><span class="timestamp">3:10<i id="8"
+                                class="far songItemPlay fa-play-circle"></span></i></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100" step="0.00005">
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i>
+            <div class="songInfo">
+                <span id="masterSongName"> Moonlight Sonata No.14 in C#m - 1st movement</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/5ef5b3aef0.js" crossorigin="anonymous"></script>
+
+    <script src="{{ url_for('static' , filename='js/songs.js')}}"></script>
+    {% endblock %}

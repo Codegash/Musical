@@ -1,0 +1,131 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='homestyle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+</head>
+
+<body>
+
+    {% block navigation %}
+    {% include 'includes/navbar.html' %}
+    {% endblock navigation %}
+
+    <section class="title">
+        <div class="main-heading">
+            <h1 class="main-heading-text">Symphony</h1>
+        </div>
+        <div class="container main-heading-intro">
+            <h2 class="main-heading-intro-text">THE PASSIONATE PURSUIT OF CALM</p>
+        </div>
+        <img class="leaf1" src="{{ url_for('static' , filename='Images/leaf.png')}}" alt="leaf">
+    </section>
+
+
+    <section class="personalities">
+        <h1 class="personalities-heading">Famous Personalities...</h1>
+        <div id="MyCarousel" class="carousel slide" data-bs-ride="carousel" data-interval="100">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="personality-row row">
+
+                        <div class="personality-column col-3">
+                            <img class="personality-frame" src="{{ url_for('static' , filename='Images/frame.jpg')}}"
+                                alt="frame">
+                            <img class="personality-image" src="{{ url_for('static' , filename='Images/mozart.jpg')}}"
+                                alt="mozart">
+                            <h4 class="personality-title">Mozart</h4>
+                        </div>
+
+                        <div class="personality-column col-3">
+                            <img class="personality-frame" src="{{ url_for('static' , filename='Images/frame.jpg')}}"
+                                alt="frame">
+                            <img class="personality-image"
+                                src="{{ url_for('static' , filename='Images/beethoven.jpg')}}" alt="Beethoven">
+                            <h4 class="personality-title">Ludwig van Beethoven</h4>
+
+                        </div>
+                        <div class="personality-column col-3">
+                            <img class="personality-frame" src="{{ url_for('static' , filename='Images/frame.jpg')}}"
+                                alt="frame">
+                            <img class="personality-image"
+                                src="{{ url_for('static' , filename='Images/Gabriel Faure.jpg')}}" alt="Ilyich">
+                            <h4 class="personality-title">Gabriel Faure</h4>
+                        </div>
+                        <div class="personality-column col-3">
+                            <img class="personality-frame" src="{{ url_for('static' , filename='Images/frame.jpg')}}"
+                                alt="frame">
+                            <img class="personality-image" src="{{ url_for('static' , filename='Images/Salieri.jpg')}}"
+                                alt="Ilyich">
+                            <h4 class="personality-title">Antonio Salieri</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="personality-row row">
+
+                        <div class="personality-column col-3">
+                            <img class="personality-frame" src="{{ url_for('static' , filename='Images/frame.jpg')}}"
+                                alt="frame">
+                            <img class="personality-image"
+                                src="{{ url_for('static' , filename='Images/Edvard Greig.jpg')}}" alt="mozart">
+                            <h4 class="personality-title">Edvard Greig</h4>
+                        </div>
+
+                        <div class="personality-column col-3">
+                            <img class="personality-frame" src="{{ url_for('static' , filename='Images/frame.jpg')}}"
+                                alt="frame">
+                            <img class="personality-image"
+                                src="{{ url_for('static' , filename='Images/beethoven.jpg')}}" alt="Beethoven">
+                            <h4 class="personality-title">Ludwig van Beethoven</h4>
+
+                        </div>
+                        <div class="personality-column col-3">
+                            <img class="personality-frame" src="{{ url_for('static' , filename='Images/frame.jpg')}}"
+                                alt="frame">
+                            <img class="personality-image" src="{{ url_for('static' , filename='Images/Ilyich.jpg')}}"
+                                alt="Ilyich">
+                            <h4 class="personality-title">Pyotr Ilyich Tchaikovsky</h4>
+                        </div>
+                        <div class="personality-column col-3">
+                            <img class="personality-frame" src="{{ url_for('static' , filename='Images/frame.jpg')}}"
+                                alt="frame">
+                            <img class="personality-image"
+                                src="{{ url_for('static' , filename='Images/Juventino Rosas.jpg')}}" alt="Ilyich">
+                            <h4 class="personality-title">Juventino Rosas</h4>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#MyCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#MyCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Quote section -->
+    </section>
+    <section class="quote-section">
+        <img class="leaf2" src="{{ url_for('static' , filename='Images/leaf.png')}}" alt="leaf">
+
+        <div class="quote-container container">
+            <p class="quote-text">
+                The music is not in the notes,
+                but in the silence between...
+            </p>
+            <p class="quote-author">~Mozart</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% block footer %}
+    {% include 'includes/footer.html' %}
+    {% endblock footer %}
+</body>
+
+</html>
+{% endblock %}

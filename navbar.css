@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #1B2430;
+}
+
+.navbar ul {
+    position: relative;
+    right: 5%;
+}
+
+.navbar li {
+    float: left;
+    list-style: none;
+    padding: 20px 18px;
+}
+
+.navbar a {
+    color: #d6d0b8;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-title {
+    color: #d6d0b8;
+    font-family: "DM Serif Display";
+    padding-left: 2%;
+    font-size: 2.5rem;
+}

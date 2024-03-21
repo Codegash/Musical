@@ -1,0 +1,159 @@
+html {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-image:url("Images/Home_page-transformed.jpeg");
+}
+/* Navigation Bar */
+.navbar {
+    background-color: #1B2430;
+}
+
+.navbar ul {
+    position: relative;
+    right: 5%;
+}
+
+.navbar li {
+    float: left;
+    list-style: none;
+    padding: 20px 18px;
+}
+
+.navbar a {
+    color: #d6d0b8;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-title {
+    color: #d6d0b8;
+    font-family: "DM Serif Display";
+    padding-left: 2%;
+    font-size: 2.5rem;
+}
+
+/* Title section */
+
+.title {
+    background-image: url("Images/hmpage.jpg");
+    height: 83vh;
+    background-size: cover;
+}
+
+.main-heading {
+    text-align: right;
+    color: #d6d0b8;
+}
+
+.main-heading-text {
+    font-size: 10rem;
+    font-family: "Allura";
+    padding-right: 10vw;
+}
+
+.main-heading-intro {
+    text-align: center;
+    width: 65%;
+}
+
+.main-heading-intro-text {
+    font-family: "DM Serif Display";
+    font-size: 4rem;
+    margin-top: 20%;
+}
+
+/* Personalities Section  */
+.personalities {
+    background-image: url("Images/section-2bg.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+.personalities-heading {
+    font-family: "DM Serif Display";
+    color: #d6d0b8;
+
+    font-size: 4rem;
+    margin-left: 3rem;
+    padding-top: 2%;
+}
+
+.personality-row {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.personality-frame {
+    width: 45vh;
+    height: 60vh;
+}
+
+.personality-image {
+    width: 39vh;
+    height: 40vh;
+    position: relative;
+    bottom: 375px;
+    z-index: 1;
+}
+
+.personality-title {
+    font-family: "Cardo";
+    position: relative;
+    bottom: 360px;
+    width: 35vh;
+    left: 3.5rem;
+}
+
+/* Quote Section */
+
+.quote-section {
+    background-image: url("images/quote-section-img.jpg");
+    height: 83vh;
+    background-size: cover;
+}
+
+.quote-container {
+    width: 40%;
+    position: relative;
+    right: 26%;
+    top: 20%;
+}
+
+.quote-text {
+    font-family: "Dancing Script";
+    font-size: 5rem;
+}
+
+.quote-author {
+    font-family: "DM Serif Display";
+    font-size: 5vh;
+    position: relative;
+    text-align: right;
+}
+
+/* Leaves */
+.leaf1 {
+    position: absolute;
+    z-index: 2;
+    opacity: 0.5;
+    left: 62%;
+    width: 50%;
+    top: 338px;
+    transform: rotate(15deg);
+}
+
+.leaf2 {
+    position: absolute;
+    z-index: 2;
+    opacity: 0.5;
+    transform: rotate(220deg);
+    width: 50%;
+    left: -125px;
+    bottom: -160%;
+}
